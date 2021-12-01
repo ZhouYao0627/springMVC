@@ -1,10 +1,7 @@
 package com.atguigu.mvc.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 /**
  @author：ZhouYao
@@ -41,6 +38,20 @@ public class RequestMappingController {
             value = "/testParasAndHeaders",
             params = {"username", "password"})
     public String testParasAndHeaders() {
+        return "success";
+    }
+
+    //  @RequestMapping("/a?a/testAnt")
+    //  @RequestMapping("/a*a/testAnt")
+    @RequestMapping("/**/testAnt")
+    public String testAnt() {
+        return "success";
+    }
+
+    // 弹幕：占位符告诉程序url对应位置的东西是一个参数，注释形参告诉程序这个参数对应哪个形参
+    @RequestMapping("/testPath/{id}/{username}")
+    public String testPath(@PathVariable("id") Integer id, @PathVariable("username") String username) {
+        System.out.println("id:" + id + " username:" + username);
         return "success";
     }
 
