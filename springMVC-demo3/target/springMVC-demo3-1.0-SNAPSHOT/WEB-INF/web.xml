@@ -29,7 +29,7 @@
     <servlet>
         <servlet-name>DispatcherServlet</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-        <!-- 通过初始化参数指定SpringMVC配置文件的位置和名称 -->
+        <!-- 通过初始化参数指定SpringMVC配置文件的位置和名称 (如果自己不设置的话就会有默认的位置和名称)-->
         <init-param>
             <!-- contextConfigLocation为固定值 -->
             <param-name>contextConfigLocation</param-name>
@@ -51,6 +51,7 @@
         -->
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+
 
 
 </web-app>
