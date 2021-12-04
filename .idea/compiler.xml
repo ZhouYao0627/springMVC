@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springMVC-demo1" />
         <module name="springMVC-demo2" />
+        <module name="springMVC-jsp" />
         <module name="springMVC-demo3" />
       </profile>
     </annotationProcessing>
@@ -15,6 +16,7 @@
       <module name="springMVC-demo1" target="13" />
       <module name="springMVC-demo2" target="13" />
       <module name="springMVC-demo3" target="13" />
+      <module name="springMVC-jsp" target="13" />
     </bytecodeTargetLevel>
   </component>
 </project>

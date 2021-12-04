@@ -22,6 +22,17 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+    <!--配置HiddenHttpMethodFilter-->
+    <filter>
+        <filter-name>HiddenHttpMethodFilter</filter-name>
+        <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>HiddenHttpMethodFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
     <!--一般的Servlet配置是在web.xml中，现在引入spring框架管理，那么Servlet配置需要在spring的配置文件中-->
 
     <!--注册前端控制器DispatcherServlet-->
@@ -51,7 +62,6 @@
         -->
         <url-pattern>/</url-pattern>
     </servlet-mapping>
-
 
 
 </web-app>

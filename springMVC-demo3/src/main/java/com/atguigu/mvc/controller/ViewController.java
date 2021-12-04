@@ -19,11 +19,18 @@ public class ViewController {
 
     @RequestMapping("/testForward")
     public String testForward(){
-        return "forward:testThymeleafView";
+        return "forward:/testThymeleafView";
     }
 
     // 弹幕：转发是在一次请求内进行页面跳转，地址栏不变
     //      重定向是发出一次新的请求，地址栏改变
+    @RequestMapping("/testRedirect")
+    public String testRedirect(){
+        return "redirect:/testThymeleafView";
+    }
+
+
+
 
 
 
